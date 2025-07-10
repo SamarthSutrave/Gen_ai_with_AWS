@@ -34,3 +34,7 @@ model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy']
 
 # Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=10)
+
+# Evaluate the model on the test set
+loss, accuracy = model.evaluate(X_test, y_test)
+print(f"Test Accuracy: {accuracy}")
